@@ -1,3 +1,7 @@
+import React, { useState } from 'react'
+import Header from '../components/header'
+import sharedStyles from '../styles/shared.module.css'
+
 const contacts = [
   {
     title: 'Tsukue.dev',
@@ -19,3 +23,16 @@ const contacts = [
     url: 'https://interior.in.net/',
   },
 ]
+
+const Work = props => <div></div>
+
+export default () => {
+  return (
+    <>
+      <Header titlePre="Work" />
+      <div className={sharedStyles.layout}>
+        <h1>Work</h1>
+      </div>
+    </>
+  )
+}
