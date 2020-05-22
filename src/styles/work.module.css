@@ -1,12 +1,29 @@
-.blogIndex {
-  padding: 0 5%;
+.wrapper {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  background-color: #fff;
+  color: #444;
+  max-width: 1080px;
+  margin: auto;
 }
 
-.blogIndex h1 {
-  margin-bottom: 50px;
+.box {
+  background-color: white;
+  /* color: #fff; */
+  border: 0.5px solid;
+  border-color: gray;
+  padding: 20px;
+  font-size: 150%;
+}
+.box:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
+  border-color: black;
 }
 
-.previewAlertContainer {
-  display: flex;
-  justify-content: center;
+.img {
+  height: 200px;
+  object-fit: cover;
 }
