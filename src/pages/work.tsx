@@ -23,21 +23,18 @@ const works = [
     image: 'https://interior.in.net/images/common/ogp.png',
     url: 'https://interior.in.net/',
   },
-  {
-    title: 'Room Make',
-    description:
-      'お部屋づくりの悩みを解決する素敵な記事に出会えるソーシャルメディア',
-    image: 'https://interior.in.net/images/common/ogp.png',
-    url: 'https://interior.in.net/',
-  },
 ]
 
 const Work = ({ work }) => (
-  <div className={workStyles.box}>
-    <img src={work.image} alt={work.title} className={workStyles.img} />
-    <h3>{work.title}</h3>
-    <p>{work.description}</p>
-  </div>
+  <a className={workStyles.box} href={work.url} target="_blank" rel="noopener">
+    <img src={work.image} alt={work.title} className={workStyles.ogp} />
+    <div className={workStyles.contents}>
+      <div className={workStyles.contentsTitle}>{work.title}</div>
+      <div className={workStyles.contentsDescription}>
+        <p>{work.description}</p>
+      </div>
+    </div>
+  </a>
 )
 
 export default () => {
@@ -45,7 +42,8 @@ export default () => {
     <>
       <Header titlePre="Work" />
       <div className={sharedStyles.layout}>
-        <h1>Work</h1>
+        <h1>My Work</h1>
+        <br />
         <div className={workStyles.wrapper}>
           {works.map((work, index) => (
             <Work key={`work-list-${index}`} work={work} />
